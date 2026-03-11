@@ -226,6 +226,39 @@ h2 {
   padding: 1.2rem;
 }
 
+.solution-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.solution-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -50% -20%;
+  height: 120px;
+  background: radial-gradient(circle, rgba(29, 125, 255, 0.25), transparent 70%);
+  pointer-events: none;
+}
+
+.solution-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(100, 168, 255, 0.5);
+  box-shadow: 0 14px 30px rgba(7, 37, 84, 0.45);
+}
+
+.solution-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 0.7rem;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.8rem;
+  background: linear-gradient(160deg, rgba(29, 125, 255, 0.4), rgba(18, 57, 110, 0.55));
+  border: 1px solid rgba(100, 168, 255, 0.35);
+  font-size: 1.3rem;
+}
+
 .card h3 {
   margin-top: 0;
   font-size: 1.05rem;
