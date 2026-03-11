@@ -109,6 +109,24 @@ body {
   font-weight: 600;
 }
 
+
+.btn-secondary {
+  display: inline-block;
+  margin-top: 0.6rem;
+  background: transparent;
+  color: var(--primary-soft);
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  color: var(--text);
+  border-color: var(--primary-soft);
+}
+
 .section-space {
   padding: 4rem 0;
 }
@@ -185,6 +203,17 @@ h2 {
 }
 
 @media (max-width: 640px) {
+  .floating-actions {
+    right: 0.7rem;
+    bottom: 0.7rem;
+  }
+
+  .float-btn {
+    min-width: 118px;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.92rem;
+  }
+
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -203,4 +232,57 @@ h2 {
   .cards-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+.cta-box {
+  text-align: center;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(29, 125, 255, 0.2), rgba(11, 18, 34, 0.95));
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+}
+
+.cta-box p {
+  color: var(--muted);
+  max-width: 62ch;
+  margin: 0 auto;
+}
+
+.cta-actions {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.floating-actions {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.float-btn {
+  min-width: 130px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.float-btn.call {
+  background: linear-gradient(90deg, #1d7dff, #59a3ff);
+}
+
+.float-btn.whatsapp {
+  background: linear-gradient(90deg, #13b466, #25d366);
 }
