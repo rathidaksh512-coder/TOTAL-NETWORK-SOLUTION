@@ -264,6 +264,7 @@ h2 {
   font-size: 1.05rem;
 }
 
+.section-subtitle,
 .card p,
 .why-us p,
 .contact p,
@@ -348,6 +349,60 @@ h2 {
   background: linear-gradient(90deg, #13b466, #25d366);
 }
 
+
+
+.section-subtitle {
+  max-width: 74ch;
+  margin-top: -0.2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  background: linear-gradient(180deg, rgba(100, 168, 255, 0.12), rgba(11, 18, 34, 0.95));
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(100, 168, 255, 0.55);
+  box-shadow: 0 16px 32px rgba(9, 33, 74, 0.5);
+}
+
+.project-image {
+  min-height: 130px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #d8ecff;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(98, 171, 255, 0.45), rgba(18, 37, 71, 0.25) 42%, transparent 70%),
+    linear-gradient(135deg, #0d2146, #081328 60%);
+  transition: transform 0.35s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.06);
+}
+
+.project-content {
+  padding: 1rem 1rem 1.15rem;
+}
+
+.project-content h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.04rem;
+}
+
 @media (max-width: 960px) {
   .hero-grid,
   .why-grid {
@@ -363,7 +418,8 @@ h2 {
     aspect-ratio: 1.25 / 1;
   }
 
-  .cards-grid {
+  .cards-grid,
+  .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -389,7 +445,8 @@ h2 {
     align-items: flex-start;
   }
 
-  .cards-grid {
+  .cards-grid,
+  .projects-grid {
     grid-template-columns: 1fr;
   }
 
