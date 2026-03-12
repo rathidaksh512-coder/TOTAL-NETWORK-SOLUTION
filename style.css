@@ -273,6 +273,47 @@ h2 {
 }
 
 
+
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.35rem;
+}
+
+.testimonial-card {
+  background: linear-gradient(180deg, rgba(100, 168, 255, 0.13), rgba(10, 20, 38, 0.95));
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(100, 168, 255, 0.55);
+  box-shadow: 0 14px 28px rgba(9, 33, 74, 0.42);
+}
+
+.stars {
+  color: #6eb6ff;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.testimonial-card p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.testimonial-card h3 {
+  margin: 0.9rem 0 0;
+  font-size: 0.98rem;
+  color: #dbeeff;
+}
+
 .why-features-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -364,10 +405,61 @@ h2 {
 }
 
 .site-footer {
+  margin-top: 1rem;
   border-top: 1px solid var(--border);
-  padding: 1.2rem 0;
+  background: linear-gradient(180deg, rgba(7, 14, 29, 0.95), rgba(4, 8, 18, 0.98));
   color: var(--muted);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  gap: 1.2rem;
+  padding: 2rem 0 1.4rem;
+}
+
+.footer-brand h3,
+.footer-contact h4,
+.footer-links h4 {
+  margin: 0 0 0.55rem;
+  color: #e6f2ff;
+}
+
+.footer-brand p {
+  margin: 0;
+}
+
+.footer-contact ul,
+.footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-contact li,
+.footer-links li {
+  margin-bottom: 0.45rem;
+}
+
+.footer-contact a,
+.footer-links a {
+  color: #c8daf7;
+  text-decoration: none;
+}
+
+.footer-contact a:hover,
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(100, 168, 255, 0.2);
   text-align: center;
+  padding: 0.8rem 0;
+}
+
+.footer-bottom p {
+  margin: 0;
 }
 
 .floating-actions {
@@ -469,8 +561,13 @@ h2 {
 
   .cards-grid,
   .projects-grid,
+  .testimonials-grid,
   .why-features-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -505,8 +602,14 @@ h2 {
 
   .cards-grid,
   .projects-grid,
+  .testimonials-grid,
   .why-features-grid {
     grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
   }
 
   .floating-actions {
